@@ -1,0 +1,318 @@
+	$("document").ready(function() {
+	
+		//navigation menu effection
+		$('ul.nav.nav-pills li a').mouseout(function() {
+			 var v = $(this).siblings().is(':visible');
+			 if ($(this).attr('class') == "dropdown-toggle dropdown_clicked" && !v) 
+			  $(this).removeClass('dropdown_clicked');
+			  
+		});
+	
+		var target = null;
+		$('ul.nav.nav-pills li a').click(function(e){
+
+		   if ($(this).attr('class') == "dropdown-toggle" && target != null)
+			 target.removeClass('dropdown_clicked');
+
+		   target = $(e.target);
+		   target.addClass('dropdown_clicked');
+
+		  
+					
+	    });
+   
+		$(document).click(function(e){
+
+			if (target != null) {
+				target.removeClass('dropdown_clicked');
+				target = null;
+			}
+		});
+		//navigation menu effection - end
+		
+		$('div.thumbnail').mouseover(function() {
+			$(this).css('border-color', '#0088cc');
+		});
+		
+		$('div.thumbnail').mouseout(function() {
+			$(this).css('border-color', '');
+		});
+
+	});
+	
+/*Submenu activate an item */
+function hoverli(n){
+	src = $('#submenu ul li:eq(' + (n-1) + ')');
+	if(src != null)
+	{
+        src.addClass('active');
+  	}
+}
+
+function openPopupWin(url, width, height)
+{
+	if (width === undefined) width = 650;
+	if (height === undefined) height = 700;
+	var top = 100;
+	var left = 200;
+	
+    var win = window.open(url, '_blank', 'scrollbars=1,resizable=1,toolbar=no,directories=no, status=no, menubar=no,location=yes,top='+ top +',left='+ left +',width=' + width + ',height=' + height);
+	
+	var isChrome = !!window.chrome;
+	if(isChrome === true) {
+		win.moveTo(left, top);
+	}
+}
+
+///////////////////////original comment js file///////////////////////////////
+$.fn.extend({
+	loadbuttonstyle:function(){
+		//login button
+		$('.loginbtn').bind('focus',function(){
+			$(this).css('background','url(/images/login1.gif) no-repeat');
+		});
+		$('.loginbtn').bind('blur',function(){
+			$(this).css('background','url(/images/login.gif) no-repeat');
+		});
+		$('.loginbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/login1.gif) no-repeat');
+		});
+		$('.loginbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/login.gif) no-repeat');
+		});
+		//back
+		$('.back').bind('focus',function(){
+			$(this).css('background','url(/images/back1.gif) no-repeat');
+		});
+		$('.back').bind('blur',function(){
+			$(this).css('background','url(/images/back.gif) no-repeat');
+		});
+		$('.back').bind('mouseover',function(){
+			$(this).css('background','url(/images/back1.gif) no-repeat');
+		});
+		$('.back').bind('mouseout',function(){
+			$(this).css('background','url(/images/back.gif) no-repeat');
+		});
+		//next button
+		$('.nextbtn').bind('focus',function(){
+			$(this).css('background','url(/images/next1.gif) no-repeat');
+		});
+		$('.nextbtn').bind('blur',function(){
+			$(this).css('background','url(/images/next.gif) no-repeat');
+		});
+		$('.nextbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/next1.gif) no-repeat');
+		});
+		$('.nextbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/next.gif) no-repeat');
+		});
+		//submit button
+		$('.submitbtn').bind('focus',function(){
+			$(this).css('background','url(/images/submit1.gif) no-repeat');
+		});
+		$('.submitbtn').bind('blur',function(){
+			$(this).css('background','url(/images/submit.gif) no-repeat');
+		});
+		$('.submitbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/submit1.gif) no-repeat');
+		});
+		$('.submitbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/submit.gif) no-repeat');
+		});
+		//reset button
+		$('.resetbtn').bind('focus',function(){
+			$(this).css('background','url(/images/reset1.gif) no-repeat');
+		});
+		$('.resetbtn').bind('blur',function(){
+			$(this).css('background','url(/images/reset.gif) no-repeat');
+		});
+		$('.resetbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/reset1.gif) no-repeat');
+		});
+		$('.resetbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/reset.gif) no-repeat');
+		});
+		//clear button
+		$('.cancelbtn').bind('focus',function(){
+			$(this).css('background','url(/images/cance1.gif) no-repeat');
+		});
+		$('.cancelbtn').bind('blur',function(){
+			$(this).css('background','url(/images/cance.gif) no-repeat');
+		});
+		$('.cancelbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/cance1.gif) no-repeat');
+		});
+		$('.cancelbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/cance.gif) no-repeat');
+		});
+		
+		//return button
+		$('.returnbtn').bind('focus',function(){
+			$(this).css('background','url(/images/returnap1.gif) no-repeat');
+		});
+		$('.returnbtn').bind('blur',function(){
+			$(this).css('background','url(/images/returnap.gif) no-repeat');
+		});
+		$('.returnbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/returnap1.gif) no-repeat');
+		});
+		$('.returnbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/returnap.gif) no-repeat');
+		});
+		
+		//delete button
+		$('.deletebtn').bind('focus',function(){
+			$(this).css('background','url(/images/delete1.gif) no-repeat');
+		});
+		$('.deletebtn').bind('blur',function(){
+			$(this).css('background','url(/images/delete0.gif) no-repeat');
+		});
+		$('.deletebtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/delete1.gif) no-repeat');
+		});
+		$('.deletebtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/delete0.gif) no-repeat');
+		});
+		
+		//search button
+		$('.searchbtn').bind('focus',function(){
+			$(this).css('background','url(/images/search1.gif) no-repeat');
+		});
+		$('.searchbtn').bind('blur',function(){
+			$(this).css('background','url(/images/search.gif) no-repeat');
+		});
+		$('.searchbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/search1.gif) no-repeat');
+		});
+		$('.searchbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/search.gif) no-repeat');
+		});
+		
+		//ok button
+		$('.okbtn').bind('focus',function(){
+			$(this).css('background','url(/images/ok1.gif) no-repeat');
+		});
+		$('.okbtn').bind('blur',function(){
+			$(this).css('background','url(/images/ok.gif) no-repeat');
+		});
+		$('.okbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/ok1.gif) no-repeat');
+		});
+		$('.okbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/ok.gif) no-repeat');
+		});
+		
+		//update cart button
+		$('.updatecartbtn').bind('focus',function(){
+			$(this).css('background','url(/images/updatecart1.gif) no-repeat');
+		});
+		$('.updatecartbtn').bind('blur',function(){
+			$(this).css('background','url(/images/updatecart.gif) no-repeat');
+		});
+		$('.updatecartbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/updatecart1.gif) no-repeat');
+		});
+		$('.updatecartbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/updatecart.gif) no-repeat');
+		});
+		
+		//continue shopping button
+		$('.continueshoppingbtn').bind('focus',function(){
+			$(this).css('background','url(/images/continueshopping1.gif) no-repeat');
+		});
+		$('.continueshoppingbtn').bind('blur',function(){
+			$(this).css('background','url(/images/continueshopping.gif) no-repeat');
+		});
+		$('.continueshoppingbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/continueshopping1.gif) no-repeat');
+		});
+		$('.continueshoppingbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/continueshopping.gif) no-repeat');
+		});
+
+		//quick add button
+		/**
+		$('.quickaddbtn').bind('focus',function(){
+			$(this).css('background','url(/images/quick_addh.gif) no-repeat');
+		});
+		$('.quickaddbtn').bind('blur',function(){
+			$(this).css('background','url(/images/quick_add.gif) no-repeat');
+		});
+		$('.quickaddbtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/quick_addh.gif) no-repeat');
+		});
+		$('.quickaddbtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/quick_add.gif) no-repeat');
+		});		
+*/
+		//see the pricing button
+		$('.logintoseebtn').bind('focus',function(){
+			$(this).css('background','url(/images/logintoseeh.gif) no-repeat');
+		});
+		$('.logintoseebtn').bind('blur',function(){
+			$(this).css('background','url(/images/logintosee.gif) no-repeat');
+		});
+		$('.logintoseebtn').bind('mouseover',function(){
+			$(this).css('background','url(/images/logintoseeh.gif) no-repeat');
+		});
+		$('.logintoseebtn').bind('mouseout',function(){
+			$(this).css('background','url(/images/logintosee.gif) no-repeat');
+		});			
+	},
+	loadinputborder:function(){
+		$(':input').each(function(index,obj){
+
+		if($(this).attr('type') != 'submit' && 
+				$(this).attr('type') != 'button' && 
+				$(this).attr('type') != 'reset' &&
+				$(this).attr('type') != 'checkbox' &&
+				$(this).attr('type') != 'radio' && 
+				$(this).attr('class') != 'top_s_keyword'){
+
+			//$(this).css('ime-mode','disabled');
+			$(this).css('border','#888 1px solid');
+			$(this).bind('focus',function(){
+				$(this).css('border','#ff8a00 1px solid');
+			});
+			$(this).bind('blur',function(){
+				$(this).css('border','#888 1px solid');
+
+			});
+		}
+	});
+	}
+});
+
+
+String.prototype.trim=function(){     
+    return this.replace(/(^\s*)|(\s*$)/g, '');  
+}
+
+String.prototype.ltrim=function()  
+{  
+  return this.replace(/(^s*)/g,'');  
+} 
+String.prototype.rtrim=function()  
+{  
+  return this.replace(/(s*$)/g,'');  
+}
+
+/*
+$(document).ready(function(){
+	_right_height = $('.foot').offset().top - $('.layout_right_context').offset().top - 43;
+	//alert(_right_height);
+	$('#careers_menu').css('height',_right_height);
+	
+	//$(document).loadbuttonstyle();
+	$(document).loadinputborder();
+	$(document).loadvalidation();
+	$('form').bind('submit',function(){
+		$('body').css('cursor','wait');
+	});
+});
+*/
+
+  $(".btnlink").hover(
+    function(){$(this).addClass("btnlinkhover");},
+    function(){$(this).removeClass("btnlinkhover")}
+  );

@@ -1,0 +1,35 @@
+form.frm1 {margin:0 20px;}
+form.frm1 div {margin-bottom:10px;}
+form.frm1 label {float:left; width:110px; text-align:right; clear:left; margin-right:15px;}
+form.frm1 br {margin-bottom:15px;}
+.note {color:#999;}
+.required {color:#ff0000;}
+a.noteLk {color:#28477c; text-decoration:underline;}
+a.lk1 {cursor:pointer;text-decoration:underline; color:#004d99;}
+.red {color:#ff0000;}
+
+
+div.anchorLayer{
+	position:relative;
+}
+div.floatLayer {
+	border:1px solid #999;
+	display:none;
+	width:50%px;
+	position:relative;
+	left:0px;
+	background-color:#eee;
+	padding:10px;
+}
+div.floatLayer p {color:#28477c;}
+div.floatLayer ul {margin-left:20px; padding-left:0;}
+div.floatLayer br {margin:0;padding:0;}
+div.floatLayer p.close {float:right;margin:0;padding:0;}
+div.floatLayer p.close a {font-weight:normal; color:#000;cursor:pointer;}
+div.floatLayer div.clear {clear:both;margin:0;padding:0;}
+div.floatLayer ol li {color:#28477c;margin-left:50px; list-style-type:decimal;}
+
+div.auth {padding-top:5px;margin-left:140px;}
+
+
+
