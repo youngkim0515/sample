@@ -1,0 +1,103 @@
+/*------------------------------ styles for "share product with email" ---------------------*/
+#popupContactClose_email {
+cursor: pointer;
+text-decoration:none;}
+
+#backgroundPopup_email{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+height:100%;
+width:100%;
+top:0;
+left:0;
+background:#000000;
+border:1px solid #cecece;
+z-index:2000;}
+#popupContact_email{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+min-height:580px;
+width:50%;
+
+/*background:url(/images/quicklogin_bg.png) no-repeat;*/
+background-color:#fff;
+border:0px solid #cecece;
+z-index:2;
+padding:20px;
+font-size:13px;
+-webkit-border-radius: 5px 5px 5px 5px ;
+     -moz-border-radius: 5px 5px 5px 5px ;
+          border-radius: 5px 5px 5px 5px ;
+}
+
+#popupContactClose_email{
+font-size:21px;
+line-height:21px;
+right:20px;
+top:20px;
+position:absolute;
+font-weight:700;
+display:block;}
+
+#popupContact_email .headline {padding:17px;font-size:30px; }
+#popupContact_email .note {padding:17px;border-top:1px dotted #ccc;border-bottom:1px dotted #ccc;}
+
+#popupContact_email label {color:#000;}
+#popupContact_email input {width:100%;}
+#popupContact_email textarea {width:100%;min-width:100%;max-width:100%; height:200px;min-height:200px;max-height:200px; }
+#popupContact_email button {float:right}
+
+input.email_field, textarea.email_field {background-color:#f2dede;}
+input.inquiry_field, textarea.inquiry_field {background-color:#f2dede;}
+
+#popupContactClose_inquiry {
+cursor: pointer;
+text-decoration:none;}
+
+#backgroundPopup_inquiry{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+height:100%;
+width:100%;
+top:0;
+left:0;
+background:#000000;
+border:1px solid #cecece;
+z-index:2000;}
+#popupContact_inquiry{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+min-height:250px;
+width:60%;
+
+/*background:url(/images/quicklogin_bg.png) no-repeat;*/
+background-color:#fff;
+border:0px solid #cecece;
+z-index:2;
+padding:20px;
+font-size:13px;
+-webkit-border-radius: 5px 5px 5px 5px ;
+     -moz-border-radius: 5px 5px 5px 5px ;
+          border-radius: 5px 5px 5px 5px ;
+}
+
+#popupContactClose_inquiry{
+font-size:16px;
+line-height:16px;
+right:6px;
+top:4px;
+position:absolute;
+font-weight:700;
+display:block;}
+
+#popupContact_inquiry .headline {padding:17px;font-size:30px; }
+#popupContact_inquiry .note {padding:17px;border-top:1px dotted #ccc;border-bottom:1px dotted #ccc;}
+
+#popupContact_inquiry label {color:#000;}
+#popupContact_inquiry input {width:100%;}
+#popupContact_inquiry textarea {width:100%;min-width:100%;max-width:100%; height:200px;min-height:200px;max-height:200px; }
+#popupContact_inquiry button {float:right}
